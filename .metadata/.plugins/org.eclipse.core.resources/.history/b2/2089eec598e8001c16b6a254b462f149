@@ -1,0 +1,15 @@
+package com.assignments;
+
+public class MainDemo {
+
+	public static void main(String[] args) {
+		Kiduser user1=new Kiduser();
+		user1.setAge(10);
+		user1.setBookType("comedy");
+		user1.registerAccount();
+		user1.requestBook();
+	
+		
+	}
+
+}

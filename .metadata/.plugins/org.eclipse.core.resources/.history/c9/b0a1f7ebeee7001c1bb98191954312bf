@@ -1,0 +1,15 @@
+package onlineshopping;
+
+public class NumberformateException {
+
+	public static void main(String[] args) {
+		String st="xyz";
+		
+		int i=Integer.parseInt(st);
+		System.out.println(st);
+		
+		
+		
+	}
+
+}

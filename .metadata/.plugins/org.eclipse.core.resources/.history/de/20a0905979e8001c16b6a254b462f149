@@ -1,0 +1,17 @@
+package com.live;
+import com.musicString.*;
+import com.music.*;
+import com.musicWind.*;
+public class Test {
+	Playable music1;
+	Playable music2;
+	public static void main(String[] args) {
+
+		 Playable music1=new Venna();
+	       music1.play();
+	       Playable music2=new Saxophone();
+	       music2.play();
+      
+	}
+
+}
