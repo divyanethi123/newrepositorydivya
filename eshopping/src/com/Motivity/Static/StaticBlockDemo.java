@@ -7,6 +7,7 @@ public class StaticBlockDemo {
 			Class.forName("com.Motivity.Static.TestStatic");
 	}
 }
+
 class TestStatic{
 	 static
 	 {

@@ -18,10 +18,8 @@ public class TestCompartment {
     	else if (randomNum == 4)
     		compartments[i] = new Luggage();
     	
-    	compartments[i].notice();
-		}
-		
-
+    	System.out.println(compartments[i].notice());
+    	}
     	
 	}
 
