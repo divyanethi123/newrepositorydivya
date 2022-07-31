@@ -13,14 +13,11 @@ public class main {
 		SessionFactory sf=cf.buildSessionFactory();
 		Session se=sf.openSession();
 		Transaction tx=se.beginTransaction();
-		Student sravya=new Student();
-		sravya.setId(987);
-		sravya.setName("krishna");
-		sravya.setMarks(904);	
-		sravya.setId(9775);
-		sravya.setName("sukanya");
-		sravya.setMarks(546);
-		se.save(sravya);
+		Student lucky=new Student();	
+		lucky.setId(684);
+		lucky.setName("sukruthi");
+		lucky.setMarks(196);
+		se.save(lucky);
 		tx.commit();
 		se.close();
 	}

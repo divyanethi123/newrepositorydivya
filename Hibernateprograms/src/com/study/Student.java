@@ -1,8 +1,19 @@
 package com.study;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="student")
 public class Student {
+	@Id
+	@Column(name="id")
 	private int id;
+	@Column(name="sname")
 	private String name;
+	@Column(name="smarks")
 	private int marks;
 	public int getId() {
 		return id;

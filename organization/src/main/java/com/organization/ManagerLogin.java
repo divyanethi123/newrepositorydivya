@@ -42,9 +42,9 @@ public class ManagerLogin extends HttpServlet {
 			ResultSet rs=ps.executeQuery();
 			if(rs.next())
 			{ 
-				hs.setAttribute("mid",rs.getInt(1));
-				hs.setAttribute("username", rs.getString(2));
-				hs.setAttribute("department",rs.getString("department"));
+			
+				hs.setAttribute("kusername", rs.getString(1));
+				hs.setAttribute("ddepartment",rs.getString("department"));
 				response.sendRedirect("./manager_home.html");
 			}
 		} catch (SQLException e) {

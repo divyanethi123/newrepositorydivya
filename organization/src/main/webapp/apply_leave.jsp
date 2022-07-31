@@ -14,10 +14,11 @@
            <tr>
             <td>department</td>
               <td><select name="department">
-              <option value="department">java</option>
-               <option value="ceo">pyton</option>
-                <option value="MD">testing</option>
-              <option value="Hr">digital marketing</option>
+              <option value="department">department</option>
+              <otion value="java">java</otion>
+               <option value="python">pyton</option>
+                <option value="testing">testing</option>
+              <option value="digital marketing">digital marketing</option>
               </select></td>     
            </tr>
            <tr>
@@ -53,10 +54,9 @@
         <script>
         function validation()
         {
-        var fdate=document.getElementsById("n1").value;
+        var fdate=document.getElementById("n1").value;
     	var tdate=document.getElementById("n2").value;
-    	var count=document.getElementById("n4").value;
-  
+    	
          // To set two dates to two variables
             var date1 = new Date(fdate);
             var date2 = new Date(tdate);
@@ -65,10 +65,10 @@
             var Difference_In_Time = date2.getTime() - date1.getTime();
   
         // To calculate the no. of days between two dates
-            var days = Difference_In_Time / (1000 * 3600 * 24);
+            var Days = Difference_In_Time / (1000 * 3600 * 24);
   
         
-              document.getElementById("day").value=days;
+             return document.getElementById("day").value=Days;
         }
         </script>
         </form>

@@ -18,6 +18,7 @@
 <td>employee</td>
 <td>department</td>
 <td>leavetype</td>
+<td>available</td>
 <td>startdate</td>
 <td>enddate</td>
 <td>days</td>
@@ -28,7 +29,7 @@
 </tr>
 <%
  Connection con= Dbconnection.getconnection();
-String department=(String)session.getAttribute("department");
+String department=(String)session.getAttribute("ddepartment");
 PreparedStatement ps=con.prepareStatement("select * from leaves where department=?");
 ps.setString(1,department);
 ResultSet rs=ps.executeQuery();
@@ -39,13 +40,14 @@ while(rs.next())
 <td><%=rs.getString(1) %></td>
 <td><%=rs.getString(2)%></td>
 <td><%=rs.getString(3) %></td>
-<td><%=rs.getString(4)%></td>
-<td><%=rs.getString(5) %></td>
-<td><%=rs.getInt(6) %></td>
-<td><%=rs.getString(7) %></td>
+<td><%=rs.getInt(4) %></td>
+<td><%=rs.getString(5)%></td>
+<td><%=rs.getString(6) %></td>
+<td><%=rs.getInt(7) %></td>
 <td><%=rs.getString(8) %></td>
 <td><%=rs.getString(9) %></td>
-<td><a href="accept.jsp?leaveno=<%=rs.getString(1) %>">Accept</a>
+<td><%=rs.getString(10) %></td>
+<td><a href="accept.jsp?employee=<%=rs.getString(1) %>&available=<%=rs.getInt(4)%> &days=<%=rs.getInt(7)%>">Accept</a></td>
 </tr>
 <%} %>
 </table>

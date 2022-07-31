@@ -44,7 +44,8 @@ public class EmployeeLogin extends HttpServlet {
 			HttpSession session=request.getSession();
 			while(rs.next())
 			{
-				session.setAttribute("emailaddress", rs.getString(1));
+				session.setAttribute("eeid", rs.getInt(1));
+				session.setAttribute("eemail", rs.getString("emailid"));
 				response.sendRedirect("./employee_home.html");
 			}
 		} catch (SQLException e) {
